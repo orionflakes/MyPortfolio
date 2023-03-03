@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Business Economics Student</p>
+                <h1>Hi, I'm Tasya Nabila</h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------about-------  -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Disciplined university student with a focused ambition to work within the industry. Currently studying for a Bachelor in Business Management at Universitas Sumatera Utara with predicted GPA of 3.6, I have built a sound knowledge of finance and marketing managements learnt through studies and multiple researches and competitions. With a passion for thus, combined with workplace skills learnt through data analysing and researches of past economics events, I am well placed to start a career and hopefully add value to the industry. I have interests in the region and historical backgrounds of the Central Asian steppe and art history in general. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>SPSS and E-Views</span><br>Analyzing data</li>
+                            <li><span>English and French</span><br>Mastered foreign languages</li>
+                            <li><span>Creative Writing</span><br>Anything that require plots and rhymes</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="achievements">
+                        <ul>
+                            <li><span>Runner up of Forum Manajemen Indonesia's Competition</span><br>Category of video editing (Apr 2022)</li>
+                            <li><span>First Place KNSP Olympiad</span><br>On the subject of social studies in the level of Medan City (Oct 2017)</li>
+                            <li><span>Second Place of LCC</span><br>On the subject of World History in the level of Medan City (Nov 2018)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>MAN 1 Medan</span><br>High School</li>
+                            <li><span>Universitas Sumatera Utara</span><br>Student of Business and Management (2020-present)</li>
+                            <li><span>Udemy</span><br>Online French Course (Jun 2021)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------portfolio--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Medieval Economics Research</h3>
+                        <p>Carried out an autonomous research on the roles of irrational government and companies during the event of the South Sea Bubble 1711-1720.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg">
+                    <div class="layer">
+                        <h3>FEB USU Sehat committee</h3>
+                        <p>Help manage the opening of twelve food stands and FEB's jiu-jitsu competition, December 17, 2022 under guardianship of Professor Yasmin Muchtar SP., MBA.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Voluntary Organization of Kucing Kampus USU</h3>
+                        <p>Weekly activities of help feeding, sheltering, nursing, neutering, and adopting USU's stray cats. Also involved in raising funds and managing KKU's social media account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>E-mail: orionflakes@gmail.com</p>
+                    <p>Phone: 087770429587</p>
+                    <p>Instagram: omar_sleepy_head</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+
+</html>
